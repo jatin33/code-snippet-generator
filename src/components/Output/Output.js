@@ -22,12 +22,13 @@ function Output(props) {
 
     return (
         <div className={styles.container}>
-            <div>
-                <ol className={styles.tablist}>
-                    {tabs.map((tab) => <li key={tab}
+            <div className={styles.tablist}>
+                    {tabs.map((tab) => <button key={tab}
                         onClick={handleTabSelected}
-                        className={currentFormat === tab ? styles.active : ''}>{tab}</li>)}
-                </ol>
+                        className={currentFormat === tab ? styles.active : ''}>
+                            {tab}
+                        </button>
+                    )}
             </div>
             <div className={styles.tabcontent}>
                 <pre>

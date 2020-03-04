@@ -10,14 +10,16 @@
 
 .tablist {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     list-style: none;
+    margin: 1em;
 }
 
-li {
+button {
     cursor: pointer;
-    padding: 1em 1em 0.5em 1em;
+    padding: 1em;
+    border-radius: 5%;
     margin: 0.5em;
     background-color: darkgrey;
     box-shadow:  3px 3px 6px black;
