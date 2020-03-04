@@ -3,7 +3,7 @@ import styles from './TextInput.module.css';
 
 function TextInput(props) {
     return (
-        <input className={styles.base} {...props} />
+        <input type="text" className={styles.base} {...props} />
     )
 }
 

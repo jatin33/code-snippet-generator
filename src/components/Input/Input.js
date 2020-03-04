@@ -19,17 +19,16 @@ function Input(props) {
     return (
         <div className={styles.container}>
             <div className={styles.userinfo}>
-                <TextInput type="text"
-                    placeholder='Description...'
+                <TextInput placeholder='Description...'
                     onChange={handleDescription}
                     value={props.description} />
-                <TextInput type="text"
-                    placeholder='Trigger'
+                <TextInput placeholder='Trigger'
                     onChange={handleTrigger}
                     value={props.trigger} />
             </div>
-            <TextArea onChange={handleSnippet}
-                placeholder={props.snippet} />
+            <TextArea placeholder={'Put your Snippet here...'}
+                onChange={handleSnippet}
+                value={props.snippet} />
         </div>
     )
 }
