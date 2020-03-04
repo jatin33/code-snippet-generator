@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    margin:0.2em;
+    border:1px solid black;
+    min-height: 60vh;
+    min-width: 35em;
+}
+
+.tablist {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: darkgrey;
+}
+
+.active {
+    color: floralwhite;
+    background-color: grey;
+}
+
+.tabcontent {
+    background-color: white;
+    min-height: 40vh;
+}
+
+pre{
+    padding:1em;
+}

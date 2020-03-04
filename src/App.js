@@ -1,25 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import styles from './App.module.css';
+import Input from './components/Input/Input';
+import Output from './components/Output/Output';
 
 function App() {
+  const [description, setDescription] = useState('');
+  const [trigger, setTrigger] = useState('');
+  const [snippet, setSnippet] = useState('');
+  const [backgroundTheme, setBackgroundTheme] = useState('VSCode');
+
+  function handleDescription(value) {
+    setDescription(value);
+  }
+
+  function handleTrigger(value) {
+    setTrigger(value);
+  }
+
+  function handleSnippet(value) {
+    setSnippet(value);
+  }
+
+  useEffect(() => {
+    handleBackgroundChange(backgroundTheme);
+  });
+
+  function handleBackgroundChange(value) {
+    setBackgroundTheme(value);
+    switch (value) {
+      case 'VSCode':
+        document.body.style.backgroundColor = '#588BAE';
+        break;
+      case 'Sublime Text':
+        document.body.style.backgroundColor = '#aabbcf';
+        break;
+      case 'Atom':
+        document.body.style.backgroundColor = '#71EEB8';
+        break;
+      default:
+        break;
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Code Snippet Generator</h1>
+      <div className={styles.App}>
+        <Input manageDescription={handleDescription}
+          manageTrigger={handleTrigger}
+          manageSnippet={handleSnippet}
+          trigger={trigger}
+          description={description}
+          snippet={snippet} />
+        <Output snippet={snippet}
+          trigger={trigger}
+          description={description}
+          manageBackgroundColor={handleBackgroundChange} />
+      </div>
+    </>
   );
 }
 

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    margin: 0.2em;
+    border: 1px solid black;
+    min-height: 60vh;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+textarea {
+    min-height: 40vh;
+}
