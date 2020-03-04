@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Input.module.css';
+import TextInput from '../TextInput/TextInput';
+import TextArea from '../TextArea/TextArea';
 
 function Input(props) {
     function handleDescription(e) {
@@ -17,16 +19,16 @@ function Input(props) {
     return (
         <div className={styles.container}>
             <div className={styles.userinfo}>
-                <input type="text"
+                <TextInput type="text"
                     placeholder='Description...'
                     onChange={handleDescription}
                     value={props.description} />
-                <input type="text"
+                <TextInput type="text"
                     placeholder='Trigger'
                     onChange={handleTrigger}
                     value={props.trigger} />
             </div>
-            <textarea onChange={handleSnippet}
+            <TextArea onChange={handleSnippet}
                 placeholder={props.snippet} />
         </div>
     )

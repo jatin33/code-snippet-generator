@@ -12,15 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-input{
-  padding: 1em;
-  margin:0.5em;
-  height: 2em;
-}
-
-textarea{
-  padding: 1em;
-  margin: 0.5em;
-  height: 2em;
-}
