@@ -1,19 +1,19 @@
 const initializeVSCode = (description, trigger, body) => {
-    if (body !== undefined) {
-        return `"${description}": {
+  if (body !== undefined) {
+    return `"${description}": {
             "prefix": "${trigger}",
             "body": [
-              ${body.split('\n').map((line) => `"${line}"\n`)}
+                  ${body.split('\n').map((line) => `"${line}"\n`)}
             ],
             "description": "${description}"
           }`;
-    }
+  }
 }
 
 const initializeSublime = (description, trigger, body) => {
-    return `<snippet>
+  return `<snippet>
       <content><![CDATA[
-        ${body}
+            ${body}
     ]]></content>
       <tabTrigger>${trigger}</tabTrigger>
       <description>${description}</description>
@@ -23,10 +23,10 @@ const initializeSublime = (description, trigger, body) => {
 }
 
 const initializeAtom = (description, trigger, body) => {
-    return `'${description}':
+  return `'${description}':
     'prefix': '${trigger}'
     'body': """
-        ${body}
+            ${body}
     """`
 }
 
