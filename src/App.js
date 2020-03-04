@@ -32,7 +32,7 @@ function App() {
         document.body.style.backgroundColor = '#588BAE';
         break;
       case 'Sublime Text':
-        document.body.style.backgroundColor = '#aabbcf';
+        document.body.style.backgroundColor = '#4b4b4b';
         break;
       case 'Atom':
         document.body.style.backgroundColor = '#71EEB8';
@@ -43,7 +43,7 @@ function App() {
   }
   return (
     <>
-      <h1>Code Snippet Generator</h1>
+      <h1 style={{ color: 'floralwhite' }}>Code Snippet Generator</h1>
       <div className={styles.App}>
         <Input manageDescription={handleDescription}
           manageTrigger={handleTrigger}
