@@ -3,3 +3,12 @@
     margin:0.5em;
     height: 2em;
   }
+
+@media (min-width:300px) and (max-width:600px){
+  .base{
+    padding: 1em;
+    margin:0.5em;
+    height: 2em;
+    width: 6em;
+  }   
+}

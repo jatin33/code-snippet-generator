@@ -16,4 +16,13 @@ h1{
     justify-content: center;
     padding: 1em;
   }
-} 
+}
+
+@media (min-width:300px) and (max-width:600px) {
+    .App {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+    }
+}

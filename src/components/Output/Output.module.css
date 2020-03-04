@@ -40,3 +40,20 @@ button {
 pre{
     padding:1em;
 }
+
+@media (min-width:300px) and (max-width:600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em;
+        margin:0.2em;
+        border:3px solid floralwhite;
+        border-radius: 5%;
+        min-height: 60vh;
+        min-width: 10em;
+    }
+
+    .tabcontent{
+        background-color: white;
+    }
+}
