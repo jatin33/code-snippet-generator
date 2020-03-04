@@ -3,7 +3,7 @@ const initializeVSCode = (description, trigger, body) => {
     return `"${description}": {
             "prefix": "${trigger}",
             "body": [
-                  ${body.split('\n').map((line) => `"${line}"\n`)}
+                  ${body.split('\n').map((line) => `"${line}"\n\t\t`)}
             ],
             "description": "${description}"
           }`;
@@ -26,8 +26,8 @@ const initializeAtom = (description, trigger, body) => {
   return `'${description}':
     'prefix': '${trigger}'
     'body': """
-            ${body}
-    """`
+           ${body}
+      """`
 }
 
 export { initializeAtom, initializeSublime, initializeVSCode };

@@ -35,7 +35,7 @@ function App() {
         document.body.style.backgroundColor = '#4b4b4b';
         break;
       case 'Atom':
-        document.body.style.backgroundColor = '#71EEB8';
+        document.body.style.backgroundColor = '#40a977';
         break;
       default:
         break;
